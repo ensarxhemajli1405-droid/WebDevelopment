@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: white;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    margin: 40px auto;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s;
+    /* transform: scale(1,1);
+    transform: scaleX(4);
+    transform: scaleY(5);
+    transform: skewX(40deg);
+    transform: skewY(30deg); */
+    /* transform: rotateX(30deg);
+    transform: rotateY(120deg); */
+}
+
+.box:hover {
+    transform: translate(30px,20px) rotate(45deg) scale(1.2);
+}
+
+.box3D {
+    width: 100px;
+    height: 100px;
+    background: green;
+    margin: 40px auto;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    transition: background 3s;
+}
+
+.box3D:hover  {
+    /* transform: rotateY(130deg); */
+    transform: rotateZ(130deg);
+    background-color: blueviolet;
+}
+.transition-box {
+    width: 150px;
+    height: 150px;
+    background: pink;
+    margin: 40px auto;
+    line-height: 100px;
+    color:white;
+    font-weight: bold;
+    border-radius: 10px;
+    transition :background-color 1s,border-radius 1s ease;
+}
+.transition-box:hover {
+    background-color: brown;
+    border-radius: 50%;
+}
+.loader {
+    width: 30px;
+    height: 60px;
+    background: lightblue;
+    display: inline-block;
+    margin: 5px;
+    animation: bounce 0.6s infinite alternate;
+}
+.loader div:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.loader div:nth-child(3) {
+     animation-delay: 0.2s;
+}
+.loader div:nth-child(4){
+     animation-delay: 0.1s;
+}
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-30px);
+    }
+}
